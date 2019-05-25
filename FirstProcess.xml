@@ -1,0 +1,108 @@
+﻿<process name="ex.2.2.1" version="1.0" bpversion="6.4.1.9862" narrative="First Process" byrefcollection="true" preferredid="ea0e3243-860e-40f3-b930-af8ea7b4230f">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="09854944-2914-40a5-bd6c-3bafb72b0cb4" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>8ae4645e-b98c-448c-bd8e-6cd4ac7c7aff</onsuccess>
+  </stage>
+  <stage stageid="73f81ffe-4fcf-4d4c-b6e8-bd88fc2a28f6" name="Good End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="6a0336ed-d928-4634-9824-fe862e2de238" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="8aa7a430-1beb-404c-87a3-42bc42cedf95" name="Bad End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="50fc792d-2aa3-4f7f-b084-5b745981a0dd" name="Is Z vaild?" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[z] &gt;= 0" />
+    <ontrue>73f81ffe-4fcf-4d4c-b6e8-bd88fc2a28f6</ontrue>
+    <onfalse>8aa7a430-1beb-404c-87a3-42bc42cedf95</onfalse>
+  </stage>
+  <stage stageid="c4a81c2e-6ece-4e37-9c89-a01fa89b7b7e" name="z" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>90</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>9</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8ae4645e-b98c-448c-bd8e-6cd4ac7c7aff" name="SetZ" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>50fc792d-2aa3-4f7f-b084-5b745981a0dd</onsuccess>
+    <calculation expression="([x]*[y])+[z]" stage="z" />
+  </stage>
+  <stage stageid="184e69eb-906a-4954-80f6-a55b332d339f" name="x" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>90</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>3</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="50bc78bb-54dd-43ad-ac94-bc13fc85815d" name="y" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>90</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>7</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+</process>
